@@ -49,3 +49,7 @@ gem 'grape', github: 'intridea/grape'
 gem 'grape-swagger'
 gem 'grape-swagger-ui'
 
+# MQ
+gem 'beaneater'
+gem 'pusher', github: 'pusher/pusher-gem', branch: 'v0.10.0' # uncomment this for slanger
+

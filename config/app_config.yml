@@ -1,11 +1,47 @@
 production:
   wishplz_detect:
     bin_dir: '/usr/local/bin/'
+  beanstalk:
+    host_port: 'localhost:11300'
+  pusher:
+    use_alt: false
+    alt:
+      host: 'worker.snapup.com'
+      port: 4567
+      ws_port: 8080
+      wss_port: 8080
+    app_id: '23895'
+    key: '73ea6d62fec66f39cf38'
+    secret: '60ad8b3ef7b7e2c7859f' 
   
 development:
   wishplz_detect:
     bin_dir: '/usr/local/bin/'
+  beanstalk:
+    host_port: 'localhost:11300'
+  pusher:
+    use_alt: false
+    alt:
+      host: 'worker.snapup.com'
+      port: 4567
+      ws_port: 8080
+      wss_port: 8080
+    app_id: '23895'
+    key: '73ea6d62fec66f39cf38'
+    secret: '60ad8b3ef7b7e2c7859f' 
       
 test:
   wishplz_detect:
     bin_dir: '/usr/local/bin/'
+  beanstalk:
+    host_port: 'localhost:11300'
+  pusher:
+    use_alt: false
+    alt:
+      host: 'worker.snapup.com'
+      port: 4567
+      ws_port: 8080
+      wss_port: 8080
+    app_id: '23895'
+    key: '73ea6d62fec66f39cf38'
+    secret: '60ad8b3ef7b7e2c7859f' 
