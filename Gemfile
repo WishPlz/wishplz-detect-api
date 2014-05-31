@@ -38,6 +38,12 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Server
+gem 'thin'
+
+# UI
+gem 'haml'
+
 # API
 gem 'grape', github: 'intridea/grape'
 gem 'grape-swagger'

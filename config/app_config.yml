@@ -1,0 +1,11 @@
+production:
+  wishplz_detect:
+    bin_dir: '/usr/local/bin/'
+  
+development:
+  wishplz_detect:
+    bin_dir: '/usr/local/bin/'
+      
+test:
+  wishplz_detect:
+    bin_dir: '/usr/local/bin/'

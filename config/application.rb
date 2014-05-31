@@ -19,5 +19,18 @@ module WishplzDetectApi
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    
+    # grape
+    config.paths.add "app/api", :glob => "**/*.rb"
+    config.autoload_paths += Dir["#{Rails.root}/app", "#{Rails.root}/lib/app/**/"]
+    
+    # lib
+    config.paths.add "lib", :glob => "**/*.rb"
+    #config.autoload_paths += Dir["#{Rails.root}/lib", "#{Rails.root}/lib/**/"]   
+    config.autoload_paths += Dir["#{Rails.root}/lib", "#{Rails.root}/lib/**/"]   
+        
+    # swagger
+    config.assets.precompile += ["swagger_ui.css", "swagger_ui.js"]
+    config.assets.initialize_on_precompile = false      
   end
 end
