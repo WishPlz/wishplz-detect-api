@@ -1,0 +1,2 @@
+wishplz-detect-api
+==================
