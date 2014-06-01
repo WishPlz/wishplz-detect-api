@@ -10,6 +10,7 @@ namespace :app_tasks do
         puts "starting service #{data['service']}..."
         begin
         o = Object.const_get(data['service'], Class.new)
+        o.options = data['options']
         o.start
         rescue Exception => e
           puts e.message

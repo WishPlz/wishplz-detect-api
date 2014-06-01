@@ -6,22 +6,31 @@ module API
   class Services < Grape::API
     format :json
   
-    resource :works do
+    resource :train do
           
-          # /api/works/:id/resched
-          desc "reschedules screenshot tasks"
-          post ":id/resched" do
-            { :status => false, :data => {}, :errors => ['Not implemented yet'] }
+          # /api/works/train/start
+          desc "start training"
+          post :start do
+            ServiceTrain.queue_start
+            
+            { :status => true, :data => {}, :errors => [] }
           end
           
-    end
-    
-    resource :screenshots do
+          # /api/works/train/stop
+          desc "force stop training"
+          post :stop do
+            ServiceTrain.queue_stop
+            
+            { :status => true, :data => {}, :errors => [] }
+          end
           
-          # /api/screenshots/:id/thumbnail
-          desc "generate different thumbnail versions of a screenshot"
-          post ":id/thumbnail" do
-            { :status => false, :data => {}, :errors => ['Not implemented yet'] }
+          # /api/works/train/running
+          desc "query if training is running"
+          post :running do
+            status = false
+            status = ServiceTrain.running?
+            
+            { :status => status, :data => {}, :errors => [] }
           end
           
     end
